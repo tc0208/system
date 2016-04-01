@@ -1,0 +1,14 @@
+---
+
+- name: fih ci private key
+  include_vars: private_key.yml
+
+- name: create fih user
+  user: name=fih groups=fih 
+
+- name: create dir
+  file: path={{ private_key_path }} state=directory owner=fih grouop=fih mode=0700
+
+- name: copy private key
+  template: src=fih_private_key.j2 dest={{ private_key_path }}/id_rsa owner=fih group=fih mode=0600
+
