@@ -1,0 +1,6 @@
+---
+- name: setup elasticsearch
+  hosts: all
+  gather_facts: True
+  roles:
+    - test01

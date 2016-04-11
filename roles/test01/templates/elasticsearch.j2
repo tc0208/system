@@ -1,0 +1,6 @@
+cluster.name: {{ cluster_name }}
+
+{% for host in groups['test01'] %}
+   server {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}
+{% endfor %}
+

@@ -1,0 +1,7 @@
+---
+
+- name: deploy elasticsearch.j2 file
+  template: src=elasticsearch.j2 dest=/tmp/elasticsearch.yml owner={{ user }} group={{ group }} mode=0644
+  become: true
+
+

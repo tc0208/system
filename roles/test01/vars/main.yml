@@ -1,0 +1,9 @@
+remote_user: fih
+yum_repo_path: /etc/yum.repos.d
+
+elasticsearch_conf_path: /etc/elasticsearch
+elasticsearch_data_path: /data/elasticsearch
+user: elasticsearch
+group: elasticsearch
+
+cluster_name: elk
